@@ -11,9 +11,9 @@ function Home() {
   
   // Sample project data
   const projectData = [
-    { imageSrc: "images/webimgs/RERA NO.png", title: "SILVER OAK RESIDENCES", location: "Tukkaguda", category: "cat-1", link: "/ProjectDetails" },
-    { imageSrc: "images/webimgs/up_coming.jpg", title: "Villas", location: "Adibatla", category: "cat-2", link: "/Upcoming" },
-    { imageSrc: "images/webimgs/up_coming.jpg", title: "High-Rise Residential", location: "Manchirevula", category: "cat-2", link: "/Upcoming" },
+    { imageSrc: "/images/webimgs/RERA NO.png", title: "SILVER OAK RESIDENCES", location: "Tukkaguda", category: "cat-1", link: "/ProjectDetails" },
+    { imageSrc: "/images/webimgs/up_coming.jpg", title: "Villas", location: "Adibatla", category: "cat-2", link: "/Upcoming" },
+    { imageSrc: "/images/webimgs/up_coming.jpg", title: "High-Rise Residential", location: "Manchirevula", category: "cat-2", link: "/Upcoming" },
   ];
   
     // Filter handler
@@ -66,17 +66,17 @@ function Home() {
     // Data for slides
     const slidesData = [
       {
-        image: "images/Webimgs/1-min.jpg",
+        image: "/images/webimgs/1-min.jpg",
         /* title: "Construction",
         description: "Engineering your dreams with us.", */
       },
       {
-        image: "images/Webimgs/1-min1.jpg",
+        image: "/images/webimgs/1-min1.jpg",
         /* title: "Architecture",
         description: "Life is Architecture.", */
       },
       /* {
-        image: "images/Webimgs/1-min1.jpg",
+        image: "/images/webimgs/1-min1.jpg",
       }, */
     ];
   return (
@@ -213,31 +213,31 @@ function Home() {
                                    {/*  <!-- COLUMNS 1 -->  */}
                                     <div className="item ">
                                         <div className="mt-img-effect zoom-slow">
-                                            <a href="About"><img src="images/Webimgs/12.jpg" alt=""/></a>
+                                            <a href="About"><img src="/images/webimgs/12.jpg" alt=""/></a>
                                        </div>
                                     </div>
                                   {/*   <!-- COLUMNS 2 -->  */}
                                     <div className="item ">
                                         <div className="mt-img-effect zoom-slow">
-                                            <a href="About"><img src="images/Webimgs/7.jpg" alt=""/></a>
+                                            <a href="About"><img src="/images/webimgs/7.jpg" alt=""/></a>
                                        </div>
                                     </div>
                                   {/*   <!-- COLUMNS 3 -->  */}
                                     <div className="item ">
                                         <div className="mt-img-effect zoom-slow">
-                                            <a href="About"><img src="images/Webimgs/6.jpg" alt=""/></a>
+                                            <a href="About"><img src="/images/webimgs/6.jpg" alt=""/></a>
                                        </div>
                                     </div>
                               {/*       <!-- COLUMNS 4 -->  */}
                                     <div className="item ">
                                         <div className="mt-img-effect zoom-slow">
-                                            <a href="About"><img src="images/Webimgs/8.jpg" alt=""/></a>
+                                            <a href="About"><img src="/images/webimgs/8.jpg" alt=""/></a>
                                        </div>
                                     </div>
                                    {/*  <!-- COLUMNS 5 -->  */}
                                     <div className="item ">
                                         <div className="mt-img-effect zoom-slow">
-                                            <a href="About"><img src="images/Webimgs/9.jpg" alt=""/></a>
+                                            <a href="About"><img src="/images/webimgs/9.jpg" alt=""/></a>
                                        </div>
                                     </div>                                                                                                                                                                
                                </div>
@@ -359,7 +359,7 @@ function Home() {
                         </div>
                         
                         <div className="col-lg-4 col-md-6">
-                            <div className="mission-mid bg-no-repeat bg-cover m-b30" style={{backgroundImage:"url('images/Webimgs/10.jpg')"}}></div>
+                            <div className="mission-mid bg-no-repeat bg-cover m-b30" style={{backgroundImage:"url('/images/webimgs/10.jpg')"}}></div>
                         </div>
                         
                         <div className="col-lg-4 col-md-6">
@@ -944,7 +944,7 @@ function Home() {
        {/*  <!-- OUR PROJECT END --> */}
     
         {/*   <!-- CALL US SECTION START --> */}
-        <div className="section-full mobile-page-padding p-tb80 overlay-wraper bg-cover bg-center" style={{backgroundImage:"url('images/Webimgs/4.jpg')"}}>
+        <div className="section-full mobile-page-padding p-tb80 overlay-wraper bg-cover bg-center" style={{backgroundImage:"url('/images/webimgs/4.jpg')"}}>
             <div className="overlay-main site-bg-primary opacity-07"></div>
             <div className="container">
 
@@ -1077,21 +1077,21 @@ function Home() {
                                     <div class="item">
                                         <div class="ow-client-logo">
                                             <div class="client-logo client-logo-media">
-                                            <a href="about"><img src="images/webimgs/BLACK - LA-TIERRA DESIGN STUDIO.png" alt="design studioz" /></a></div>
+                                            <a href="about"><img src="/images/webimgs/BLACK - LA-TIERRA DESIGN STUDIO.png" alt="design studioz" /></a></div>
                                         </div>
                                     </div>
                                     
                                     <div class="item">
                                         <div class="ow-client-logo">
                                             <div class="client-logo client-logo-media">
-                                            <a href="about-1.html"><img src="images/webimgs/Collabridge logo R 1.png" alt="collabridge" style={{minWidth:'180px'}}/></a></div>
+                                            <a href="about-1.html"><img src="/images/webimgs/Collabridge logo R 1.png" alt="collabridge" style={{minWidth:'180px'}}/></a></div>
                                         </div>
                                     </div>
                                     
                                     <div class="item">
                                         <div class="ow-client-logo">
                                             <div class="client-logo client-logo-media">
-                                            <a href="about-1.html"><img src="images/webimgs/kapa-logo.png" alt=""/></a></div>
+                                            <a href="about-1.html"><img src="/images/webimgs/kapa-logo.png" alt=""/></a></div>
                                         </div>
                                     </div>
                                     

@@ -7,7 +7,7 @@ function About() {
     <div class="page-content">
     
 {/*         <!-- INNER PAGE BANNER --> */}
-        <div class="mt-bnr-inr overlay-wraper bg-parallax bg-top-center"  data-stellar-background-ratio="0.5"  style={{backgroundImage:"url('images/Webimgs/111.jpg')"}}>
+        <div class="mt-bnr-inr overlay-wraper bg-parallax bg-top-center"  data-stellar-background-ratio="0.5"  style={{backgroundImage:"url('/images/webimgs/111.jpg')"}}>
             <div class="overlay-main bg-black opacity-07"></div>
             <div class="container">
                 <div class="mt-bnr-inr-entry">
@@ -52,25 +52,25 @@ function About() {
                             {/* <!-- COLUMNS 1 --> */}
                             <div className="item">
                                 <div className="ow-img">
-                                    <a href="About"><img src="images/Webimgs/39.jpg" alt=""/></a>
+                                    <a href="About"><img src="/images/webimgs/39.jpg" alt=""/></a>
                                 </div>
                             </div>
                             {/* <!-- COLUMNS 2 --> */}
                             <div className="item">
                                 <div className="ow-img">
-                                    <a href="About"><img src="images/Webimgs/35.jpg" alt=""/></a>
+                                    <a href="About"><img src="/images/webimgs/35.jpg" alt=""/></a>
                                 </div>
                             </div>
                             {/* <!-- COLUMNS 3 --> */}
                             <div className="item">
                                 <div className="owl-img">
-                                    <a href="About"><img src="images/Webimgs/38.jpg" alt=""/></a>
+                                    <a href="About"><img src="/images/webimgs/38.jpg" alt=""/></a>
                                 </div>
                             </div>
                             {/* <!-- COLUMNS 4 --> */}
                             <div className="item">
                                 <div className="ow-img">
-                                    <a href="About"><img src="images/webimgs/37.jpg" alt=""/></a>
+                                    <a href="About"><img src="/images/webimgs/37.jpg" alt=""/></a>
                                 </div>
                             </div>
                         </div>
@@ -223,7 +223,7 @@ function About() {
                         <div class="col-lg-4 col-md-6 m-b30">
                         
                             <div class="our-team-1 hover-animation-1">
-                              <div class="profile-image scale-in-center"><img src="images/webimgs/sureshnew.png" alt="" /></div>
+                              <div class="profile-image scale-in-center"><img src="/images/webimgs/sureshnew.png" alt="" /></div>
                               <div class="figcaption">
                                 <h4>Suresh Kapa </h4>
                                 <h5>Ceo & Founder</h5>
@@ -242,7 +242,7 @@ function About() {
                         
                         <div class="col-lg-4 col-md-6 m-b30">
                             <div class="our-team-1 hover-animation-1">
-                              <div class="profile-image scale-in-center"><img src="images/webimgs/mahesh-kapa.png" alt="" /></div>
+                              <div class="profile-image scale-in-center"><img src="/images/webimgs/mahesh-kapa.png" alt="" /></div>
                               <div class="figcaption">
                                 <h4>Mahesh Kapa </h4>
                                 <h5>COO </h5>

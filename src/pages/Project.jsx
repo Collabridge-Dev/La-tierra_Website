@@ -71,9 +71,9 @@ function Project() {
   };
 
   const projects = [
-    { id: 1, category: 'cat-1', image: 'images/Webimgs/RERA NO.png', title: 'SILVER OAK RESIDENCES', description: "Serenity Villas is an exclusive residential development designed to offer a blend of luxury and comfort.", detailPage: '/ProjectDetails' },
-    { id: 2, category: 'cat-2', image: 'images/Webimgs/up_coming.jpg', title: 'Villas', description: "We are so busy watching out for what's just ahead of us that we don't take the time to enjoy where we are.", detailPage: '/Upcoming' },
-    { id: 3, category: 'cat-2', image: 'images/Webimgs/up_coming.jpg', title: 'High-Rise Residential', description: "We are so busy watching out for what's just ahead of us that we don't take the time to enjoy where we are.", detailPage: '/projectdetail1' },
+    { id: 1, category: 'cat-1', image: '/images/webimgs/RERA NO.png', title: 'SILVER OAK RESIDENCES', description: "Serenity Villas is an exclusive residential development designed to offer a blend of luxury and comfort.", detailPage: '/ProjectDetails' },
+    { id: 2, category: 'cat-2', image: '/images/webimgs/up_coming.jpg', title: 'Villas', description: "We are so busy watching out for what's just ahead of us that we don't take the time to enjoy where we are.", detailPage: '/Upcoming' },
+    { id: 3, category: 'cat-2', image: '/images/webimgs/up_coming.jpg', title: 'High-Rise Residential', description: "We are so busy watching out for what's just ahead of us that we don't take the time to enjoy where we are.", detailPage: '/projectdetail1' },
   ];
 
   // Inline styles
@@ -103,7 +103,7 @@ function Project() {
       {/* CONTENT START */}
       <div className="page-content">
         {/* INNER PAGE BANNER */}
-        <div className="mt-bnr-inr overlay-wraper bg-parallax bg-top-center" data-stellar-background-ratio="0.5" style={{ backgroundImage: "url('images/Webimgs/41.jpg')" }}>
+        <div className="mt-bnr-inr overlay-wraper bg-parallax bg-top-center" data-stellar-background-ratio="0.5" style={{ backgroundImage: "url('/images/webimgs/41.jpg')" }}>
           <div className="overlay-main bg-black opacity-07"></div>
           <div className="container">
             <div className="mt-bnr-inr-entry">

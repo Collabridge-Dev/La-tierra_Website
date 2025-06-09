@@ -78,25 +78,25 @@ function ProjectDetails() {
                                             </div>
                                             <div className="carousel-inner">
                                                 <div className="carousel-item active">
-                                                    <img src="images/webimgs/top_view-min.jpg" className="d-block w-100" alt="..." />
+                                                    <img src="/images/webimgs/top_view-min.jpg" className="d-block w-100" alt="..." />
                                                 </div>
                                                 <div className="carousel-item">
-                                                    <img src="images/webimgs/villa_min.jpg" className="d-block w-100" alt="..." />
+                                                    <img src="/images/webimgs/villa_min.jpg" className="d-block w-100" alt="..." />
                                                 </div>
                                                 <div className="carousel-item">
-                                                    <img src="images/webimgs/1-min.jpg" className="d-block w-100" alt="..." />
+                                                    <img src="/images/webimgs/1-min.jpg" className="d-block w-100" alt="..." />
                                                 </div>
                                                 <div className="carousel-item">
-                                                    <img src="images/webimgs/2-min.jpg" className="d-block w-100" alt="..." />
+                                                    <img src="/images/webimgs/2-min.jpg" className="d-block w-100" alt="..." />
                                                 </div>
                                                 <div className="carousel-item">
-                                                    <img src="images/webimgs/4-min.jpg" className="d-block w-100" alt="..." />
+                                                    <img src="/images/webimgs/4-min.jpg" className="d-block w-100" alt="..." />
                                                 </div>
                                                 <div className="carousel-item ">
-                                                    <img src="images/webimgs/interior-0-min.jpg" className="d-block w-100" alt="..." />
+                                                    <img src="/images/webimgs/interior-0-min.jpg" className="d-block w-100" alt="..." />
                                                 </div>
                                                 <div className="carousel-item">
-                                                    <img src="images/webimgs/interior-1-min.jpg" className="d-block w-100" alt="..." />
+                                                    <img src="/images/webimgs/interior-1-min.jpg" className="d-block w-100" alt="..." />
                                                 </div>
                                                
                                             </div>
@@ -120,13 +120,13 @@ function ProjectDetails() {
                                                 <div className="row p-2">
                                                     <div className="col-md-6 border-end border-1 border-dark">
                                                         <div className="list d-flex align-items-center justify-content-center mt-2 gap-2 ">
-                                                            <img src="images/webimgs/house.png" alt="" width={30} />
+                                                            <img src="/images/webimgs/house.png" alt="" width={30} />
                                                             <p className='mb-0'>Triplex Villas</p>
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6 ">
                                                         <div className="list d-flex align-items-center justify-content-center mt-2 gap-2 ">
-                                                            <img src="images/webimgs/bed.png" alt="" width={30} />
+                                                            <img src="/images/webimgs/bed.png" alt="" width={30} />
                                                             <p className='mb-0'>3 Beds</p>
                                                         </div>
                                                     </div>
@@ -136,13 +136,13 @@ function ProjectDetails() {
                                                 <div className="row p-2">
                                                     <div className="col-md-6 border-end border-1 border-dark">
                                                         <div className="list d-flex align-items-center justify-content-center mt-2 gap-2 ">
-                                                        <img src="images/webimgs/home-theater.png" alt="" width={30} />
+                                                        <img src="/images/webimgs/home-theater.png" alt="" width={30} />
                                                             <p className='mb-0'>Entertainment Room</p>
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6 ">
                                                         <div className="list d-flex align-items-center justify-content-center mt-2 gap-2 ">
-                                                            <img src="images/webimgs/parking.png" alt="" width={30} />
+                                                            <img src="/images/webimgs/parking.png" alt="" width={30} />
                                                             <p className='mb-0'>2 Parking</p>
                                                         </div>
                                                     </div>
@@ -154,7 +154,7 @@ function ProjectDetails() {
                                                 <div className="row p-2">
                                                     <div className="col-md-12">
                                                         <div className="list d-flex align-items-center justify-content-center mt-2 gap-2 ">
-                                                            <img src="images/webimgs/price.png" alt="" width={30} />
+                                                            <img src="/images/webimgs/price.png" alt="" width={30} />
                                                             <p className='mb-0'>Starting at ₹ 2 Crores</p>
                                                         </div>
                                                     </div>
@@ -196,19 +196,19 @@ function ProjectDetails() {
                         </div>
                         <div class="tab-content" id="v-pills-tabContent">
                             <div class="tab-pane fade show active" id="east-type-a" role="tabpanel" aria-labelledby="east-type-a-tab" tabindex="0">
-                                <img src="images/webimgs/east/typea-1.jpg" alt="ground" width={300} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('images/webimgs/east/typea-1.jpg')} />
-                                <img src="images/webimgs/east/typea-2.jpg" className='me-3' alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('images/webimgs/east/typea-2.jpg')} />
-                                <img src="images/webimgs/east/typea-3.jpg" alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('images/webimgs/east/typea-3.jpg')} />
+                                <img src="/images/webimgs/east/typea-1.jpg" alt="ground" width={300} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('/images/webimgs/east/typea-1.jpg')} />
+                                <img src="/images/webimgs/east/typea-2.jpg" className='me-3' alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('/images/webimgs/east/typea-2.jpg')} />
+                                <img src="/images/webimgs/east/typea-3.jpg" alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('/images/webimgs/east/typea-3.jpg')} />
                             </div>
                             <div class="tab-pane fade" id="east-type-b" role="tabpanel" aria-labelledby="east-type-b-tab" tabindex="0">
-                                <img src="images/webimgs/east/typeb-1.jpg" alt="ground" width={300} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('images/webimgs/east/typeb-1.jpg')} />
-                                <img src="images/webimgs/east/typeb-2.jpg" className='me-3' alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('images/webimgs/east/typeb-2.jpg')} />
-                                <img src="images/webimgs/east/typeb-3.jpg" alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('images/webimgs/east/typeb-3.jpg')} />
+                                <img src="/images/webimgs/east/typeb-1.jpg" alt="ground" width={300} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('/images/webimgs/east/typeb-1.jpg')} />
+                                <img src="/images/webimgs/east/typeb-2.jpg" className='me-3' alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('/images/webimgs/east/typeb-2.jpg')} />
+                                <img src="/images/webimgs/east/typeb-3.jpg" alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('/images/webimgs/east/typeb-3.jpg')} />
                             </div>
                             <div class="tab-pane fade" id="east-type-c" role="tabpanel" aria-labelledby="east-type-c-tab" tabindex="0">
-                                <img src="images/webimgs/east/typec-1.jpg" alt="ground" width={300} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('images/webimgs/east/typec-1.jpg')} />
-                                <img src="images/webimgs/east/typec-2.jpg" className='me-3' alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('images/webimgs/east/typec-2.jpg')} />
-                                <img src="images/webimgs/east/typec-3.jpg" alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('images/webimgs/east/typec-3.jpg')} />
+                                <img src="/images/webimgs/east/typec-1.jpg" alt="ground" width={300} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('/images/webimgs/east/typec-1.jpg')} />
+                                <img src="/images/webimgs/east/typec-2.jpg" className='me-3' alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('/images/webimgs/east/typec-2.jpg')} />
+                                <img src="/images/webimgs/east/typec-3.jpg" alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('/images/webimgs/east/typec-3.jpg')} />
                             </div>
                         </div>
                     </div>
@@ -224,24 +224,24 @@ function ProjectDetails() {
         </div>
         <div className="tab-content" id="v-pills-tabContent">
             <div className="tab-pane fade show active" id="west-type-a" role="tabpanel" aria-labelledby="west-type-a-tab" tabIndex="0">
-                <img src="images/webimgs/west/typea-1.jpg" className='me-3' alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('images/webimgs/west/typea-1.jpg')} />
-                <img src="images/webimgs/west/typea-2.jpg" className='me-3' alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('images/webimgs/west/typea-2.jpg')} />
-                <img src="images/webimgs/west/typea-3.jpg" alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('images/webimgs/west/typea-3.jpg')} />
+                <img src="/images/webimgs/west/typea-1.jpg" className='me-3' alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('/images/webimgs/west/typea-1.jpg')} />
+                <img src="/images/webimgs/west/typea-2.jpg" className='me-3' alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('/images/webimgs/west/typea-2.jpg')} />
+                <img src="/images/webimgs/west/typea-3.jpg" alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('/images/webimgs/west/typea-3.jpg')} />
             </div>
             <div className="tab-pane fade" id="west-type-b" role="tabpanel" aria-labelledby="west-type-b-tab" tabIndex="0">
-                <img src="images/webimgs/west/typeb-1.jpg" className='me-3' alt="ground" width={280} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('images/webimgs/west/typeb-1.jpg')} />
-                <img src="images/webimgs/west/typeb-2.jpg" className='me-3' alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('images/webimgs/west/typeb-2.jpg')} />
-                <img src="images/webimgs/west/typeb-3.jpg" alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('images/webimgs/west/typeb-3.jpg')} />
+                <img src="/images/webimgs/west/typeb-1.jpg" className='me-3' alt="ground" width={280} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('/images/webimgs/west/typeb-1.jpg')} />
+                <img src="/images/webimgs/west/typeb-2.jpg" className='me-3' alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('/images/webimgs/west/typeb-2.jpg')} />
+                <img src="/images/webimgs/west/typeb-3.jpg" alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('/images/webimgs/west/typeb-3.jpg')} />
             </div>
             <div className="tab-pane fade" id="west-type-c" role="tabpanel" aria-labelledby="west-type-c-tab" tabIndex="0">
-                <img src="images/webimgs/west/typec-1.jpg" className='me-3' alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('images/webimgs/west/typec-1.jpg')} />
-                <img src="images/webimgs/west/typec-2.jpg" className='me-3' alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('images/webimgs/west/typec-2.jpg')} />
-                <img src="images/webimgs/west/typec-3.jpg" alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('images/webimgs/west/typec-3.jpg')} />
+                <img src="/images/webimgs/west/typec-1.jpg" className='me-3' alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('/images/webimgs/west/typec-1.jpg')} />
+                <img src="/images/webimgs/west/typec-2.jpg" className='me-3' alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('/images/webimgs/west/typec-2.jpg')} />
+                <img src="/images/webimgs/west/typec-3.jpg" alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('/images/webimgs/west/typec-3.jpg')} />
             </div>
             <div className="tab-pane fade" id="west-type-d15" role="tabpanel" aria-labelledby="west-type-d15-tab" tabIndex="0">
-                <img src="images/webimgs/west/typed15-1.jpg" className='me-3' alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('images/webimgs/west/typed15-1.jpg')} />
-                <img src="images/webimgs/west/typed15-2.jpg" className='me-3' alt="ground" width={250} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('images/webimgs/west/typed15-2.jpg')} />
-                <img src="images/webimgs/west/typed15-3.jpg" alt="ground" width={250} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('images/webimgs/west/typed15-3.jpg')} />
+                <img src="/images/webimgs/west/typed15-1.jpg" className='me-3' alt="ground" width={270} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('/images/webimgs/west/typed15-1.jpg')} />
+                <img src="/images/webimgs/west/typed15-2.jpg" className='me-3' alt="ground" width={250} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('/images/webimgs/west/typed15-2.jpg')} />
+                <img src="/images/webimgs/west/typed15-3.jpg" alt="ground" width={250} data-bs-toggle="modal" data-bs-target="#imageModal" onClick={() => setImage('/images/webimgs/west/typed15-3.jpg')} />
             </div>
         </div>
     </div>
@@ -276,7 +276,7 @@ function ProjectDetails() {
                                         </div>
                                     </div>  
                                     <div className="site_map_cont text-center">
-                                        <img src="images/webimgs/site-map.jpg" alt="site map" width={600} />
+                                        <img src="/images/webimgs/site-map.jpg" alt="site map" width={600} />
                                     </div>
                                 </div>
                             </div>
@@ -331,61 +331,61 @@ function ProjectDetails() {
         {/* Add margin-left to the first card */}
         <div className="amenity" style={{ padding: '3px', marginLeft: '100px', marginRight: 'auto' }}>
             <div className="amenity-image">
-                <img src="images/webimgs/clbhouse.jpg" alt="15000 sqft Clubhouse" style={{ width: '200px', height: '200px', objectFit: 'cover', borderRadius: '8px' }} />
+                <img src="/images/webimgs/clbhouse.jpg" alt="15000 sqft Clubhouse" style={{ width: '200px', height: '200px', objectFit: 'cover', borderRadius: '8px' }} />
             </div>
             <p style={{ fontWeight: 'bold', fontSize: '1.1em', color: '#333', marginTop: '5px' }}>15000 sqft Clubhouse</p>
         </div>
         <div className="amenity" style={{ padding: '3px' }}>
             <div className="amenity-image">
-                <img src="images/webimgs/gym.jpg" alt="Gym" style={{ width: '200px', height: '200px', objectFit: 'cover', borderRadius: '8px' }} />
+                <img src="/images/webimgs/gym.jpg" alt="Gym" style={{ width: '200px', height: '200px', objectFit: 'cover', borderRadius: '8px' }} />
             </div>
             <p style={{ fontWeight: 'bold', fontSize: '1.1em', color: '#333', marginTop: '5px' }}>Gym</p>
         </div>
         <div className="amenity" style={{ padding: '3px' }}>
             <div className="amenity-image">
-                <img src="images/webimgs/yoga.jpg" alt="Outdoor Yoga Space" style={{ width: '200px', height: '200px', objectFit: 'cover', borderRadius: '8px' }} />
+                <img src="/images/webimgs/yoga.jpg" alt="Outdoor Yoga Space" style={{ width: '200px', height: '200px', objectFit: 'cover', borderRadius: '8px' }} />
             </div>
             <p style={{ fontWeight: 'bold', fontSize: '1.1em', color: '#333', marginTop: '5px' }}>Outdoor Yoga Space</p>
         </div>
         <div className="amenity" style={{ padding: '3px' }}>
             <div className="amenity-image">
-                <img src="images/webimgs/hall.jpg" alt="Banquet Hall" style={{ width: '200px', height: '200px', objectFit: 'cover', borderRadius: '8px' }} />
+                <img src="/images/webimgs/hall.jpg" alt="Banquet Hall" style={{ width: '200px', height: '200px', objectFit: 'cover', borderRadius: '8px' }} />
             </div>
             <p style={{ fontWeight: 'bold', fontSize: '1.1em', color: '#333', marginTop: '5px' }}>Banquet Hall</p>
         </div>
         <div className="amenity" style={{ padding: '3px' }}>
             <div className="amenity-image">
-                <img src="images/webimgs/swimming.jpg" alt="Swimming Pool" style={{ width: '200px', height: '200px', objectFit: 'cover', borderRadius: '8px' }} />
+                <img src="/images/webimgs/swimming.jpg" alt="Swimming Pool" style={{ width: '200px', height: '200px', objectFit: 'cover', borderRadius: '8px' }} />
             </div>
             <p style={{ fontWeight: 'bold', fontSize: '1.1em', color: '#333', marginTop: '5px' }}>Swimming Pool</p>
         </div>
         <div className="amenity" style={{ padding: '3px' }}>
             <div className="amenity-image">
-                <img src="images/webimgs/badminton2.jpg" alt="Badminton" style={{ width: '200px', height: '200px', objectFit: 'cover', borderRadius: '8px' }} />
+                <img src="/images/webimgs/badminton2.jpg" alt="Badminton" style={{ width: '200px', height: '200px', objectFit: 'cover', borderRadius: '8px' }} />
             </div>
             <p style={{ fontWeight: 'bold', fontSize: '1.1em', color: '#333', marginTop: '5px' }}>Outdoor Badminton Court</p>
         </div>
         <div className="amenity" style={{ padding: '3px' }}>
             <div className="amenity-image">
-                <img src="images/webimgs/basketball.jpg" alt="Basketball Court" style={{ width: '200px', height: '200px', objectFit: 'cover', borderRadius: '8px' }} />
+                <img src="/images/webimgs/basketball.jpg" alt="Basketball Court" style={{ width: '200px', height: '200px', objectFit: 'cover', borderRadius: '8px' }} />
             </div>
             <p style={{ fontWeight: 'bold', fontSize: '1.1em', color: '#333', marginTop: '5px' }}>Outdoor Basketball Court</p>
         </div>
         <div className="amenity" style={{ padding: '3px' }}>
             <div className="amenity-image">
-                <img src="images/webimgs/parks.jpg" alt="Green Parks" style={{ width: '200px', height: '200px', objectFit: 'cover', borderRadius: '8px' }} />
+                <img src="/images/webimgs/parks.jpg" alt="Green Parks" style={{ width: '200px', height: '200px', objectFit: 'cover', borderRadius: '8px' }} />
             </div>
             <p style={{ fontWeight: 'bold', fontSize: '1.1em', color: '#333', marginTop: '5px' }}>Green Parks</p>
         </div>
         <div className="amenity" style={{ padding: '3px' }}>
             <div className="amenity-image">
-                <img src="images/webimgs/theatre.jpg" alt="Entertainment Room" style={{ width: '200px', height: '200px', objectFit: 'cover', borderRadius: '8px' }} />
+                <img src="/images/webimgs/theatre.jpg" alt="Entertainment Room" style={{ width: '200px', height: '200px', objectFit: 'cover', borderRadius: '8px' }} />
             </div>
             <p style={{ fontWeight: 'bold', fontSize: '1.1em', color: '#333', marginTop: '5px' }}>Exclusive Entertainment Room</p>
         </div>
         <div className="amenity" style={{ padding: '3px' }}>
             <div className="amenity-image">
-                <img src="images/webimgs/playarea.jpg" alt="Kids Play Area" style={{ width: '200px', height: '200px', objectFit: 'cover', borderRadius: '8px' }} />
+                <img src="/images/webimgs/playarea.jpg" alt="Kids Play Area" style={{ width: '200px', height: '200px', objectFit: 'cover', borderRadius: '8px' }} />
             </div>
             <p style={{ fontWeight: 'bold', fontSize: '1.1em', color: '#333', marginTop: '5px' }}>Kids Play Area</p>
         </div>
