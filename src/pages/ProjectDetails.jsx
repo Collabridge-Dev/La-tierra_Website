@@ -3,41 +3,64 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Nav from '../components/Nav';
-
+ 
+// Add a custom container class that's narrower than the default Bootstrap container
+const customContainerStyle = {
+//   maxWidth: '1130px',  // Reduced from default 1320px
+  margin: '0 auto',
+  padding: '0 15px',
+  width: '90%'
+};
+ 
+// Add this style object at the top with your other styles
+const stickyNavStyle = {
+  position: 'sticky',
+  top: '90px', // Height of the header
+  backgroundColor: 'white',
+  zIndex: 999,
+  boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+  transition: 'all 0.3s ease'
+};
+ 
 function ProjectDetails() {
     const [currentImage, setImage] = useState(''); // State to manage the image URL
-  
+ 
     return (
         <div>
             {/* <!-- CONTENT START --> */}
             <div className="page-content">
                 {/* <!-- INNER PAGE BANNER --> */}
-                <div className="mt-bnr-inr overlay-wraper bg-parallax bg-top-center" data-stellar-background-ratio="0.5" style={{ backgroundImage: "url('images/banner/5.jpg')" }}>
-                    <div className="overlay-main bg-black opacity-07"></div>
-                    <div className="container">
-                        <div className="mt-bnr-inr-entry">
-                            <div className="banner-title-outer">
-                                <div className="banner-title-name">
-                                    <h2 className="m-b0">SILVER OAK RESIDENCES</h2>
-                                    <h5 className='text-white'>Villas Project</h5>
-                                </div>
-                            </div>
-                            {/* <!-- BREADCRUMB ROW --> */}
-                            <div>
-                                <ul className="mt-breadcrumb breadcrumb-style-2">
-                                    <li><a href="Project">Commnunities</a></li>
-                                    <li>Project Detail</li>
-                                </ul>
-                            </div>
-                            {/* <!-- BREADCRUMB ROW END --> */}
-                        </div>
-                    </div>
+              <div className="mt-bnr-inr overlay-wraper bg-parallax bg-top-center" data-stellar-background-ratio="0.5" style={{ backgroundImage: "url('images/banner/5.jpg')", position: 'relative', height: '400px' }}>
+    <div className="overlay-main bg-black opacity-07"></div>
+    <div style={{ ...customContainerStyle, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', height: '100%' }}>  {/* Center content */}
+        <div className="mt-bnr-inr-entry">
+            <div className="banner-title-outer">
+                <div className="banner-title-name">
+                    <h2 className="m-b0">SILVER OAK RESIDENCES</h2>
+                    <h5 className='text-white'>Villas Project</h5>
                 </div>
+            </div>
+            {/* <!-- BREADCRUMB ROW --> */}
+            <div>
+                <ul className="mt-breadcrumb breadcrumb-style-2">
+                    <li><a href="Project">Commnunities</a></li>
+                    <li>Project Detail</li>
+                </ul>
+            </div>
+            {/* <!-- BREADCRUMB ROW END --> */}
+        </div>
+    </div>
+</div>
                 {/* <!-- INNER PAGE BANNER END --> */}
-                <Nav />
+               
+                {/* Update the Nav section with new sticky style */}
+                <div style={stickyNavStyle}>
+                    <Nav />
+                </div>
+ 
                 {/* <!-- SECTION CONTENT START --> */}
                 <div id="details" className="section-full p-tb80 inner-page-padding">
-                    <div className="container">
+                    <div style={customContainerStyle}>  {/* Replace className="container" with style={customContainerStyle} */}
                         <div className="project-detail-outer">
                             {/* images and details start */}
                             <div  className="m-b30">
@@ -51,7 +74,7 @@ function ProjectDetails() {
                                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
                                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
                                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                                                
+                                               
                                             </div>
                                             <div className="carousel-inner">
                                                 <div className="carousel-item active">
@@ -125,8 +148,8 @@ function ProjectDetails() {
                                                     </div>
                                                 </div>
                                             </div>
-                                            
-                                            
+                                           
+                                           
                                             <div className="proj_main_lst border-bottom border-1 border-dark">
                                                 <div className="row p-2">
                                                     <div className="col-md-12">
@@ -145,7 +168,7 @@ function ProjectDetails() {
                        {/* floor plan start */}
 <div className="m-b30">
     <div className="floor_plan">
-        <div className="section-head"> 
+        <div className="section-head">
             <div className="mt-separator-outer separator-center">
                 <div id="floor-plans" className="mt-separator">
                     <h2 className="text-uppercase sep-line-one ">
@@ -190,7 +213,7 @@ function ProjectDetails() {
                         </div>
                     </div>
                 </div>
-
+ 
                 <div className="tab-pane fade" id="west-facing" role="tabpanel" aria-labelledby="west-facing-tab" tabIndex="0">
     <div className="d-flex align-items-start">
         <div className="nav flex-column nav-pills flr_pln_typ me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -223,7 +246,7 @@ function ProjectDetails() {
         </div>
     </div>
 </div>
-
+ 
             </div>
         </div>
     </div>
@@ -242,10 +265,10 @@ function ProjectDetails() {
     </div>
 </div>
 {/* floor plan end */}
-
+ 
                             <div className="m-b30">
                                 <div id="sitemap"className="site_map">
-                                    <div className="section-head"> 
+                                    <div className="section-head">
                                         <div className="mt-separator-outer separator-center">
                                             <div className="mt-separator">
                                                 <h2 className="text-uppercase sep-line-one "><span className="font-weight-300 site-text-primary">Site</span> Map </h2>
@@ -257,27 +280,27 @@ function ProjectDetails() {
                                     </div>
                                 </div>
                             </div>
-                                            
+                                           
                            
                          
                         </div>
                     </div>
                 </div>
-                {/* <!-- SECTION CONTENT END --> */}
-{/* Amenities */}
-<div id="amenities" className="amenities">
-    <div className="section-head"> 
-        <div className="mt-separator-outer separator-center">
-            <div className="mt-separator">
-                <h2 className="text-uppercase sep-line-one">
-                    <span className="font-weight-300 site-text-primary">ameni</span>ties 
-                </h2>
-            </div>
-        </div>
-    </div>  
-
-    {/* Slider Settings with Faster Automatic Sliding and Reduced Space */}
-    <Slider
+ 
+                <div id="amenities" className="amenities">
+                    <div style={customContainerStyle}>  {/* Add container style here */}
+                        <div className="section-head">
+                            <div className="mt-separator-outer separator-center">
+                                <div className="mt-separator">
+                                    <h2 className="text-uppercase sep-line-one">
+                                        <span className="font-weight-300 site-text-primary">ameni</span>ties
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>  
+ 
+                        {/* Slider Settings with Faster Automatic Sliding and Reduced Space */}
+                        <Slider
         dots={true}
         infinite={true}
         speed={300}  // Reduced the speed for faster sliding
@@ -306,7 +329,7 @@ function ProjectDetails() {
         ]}
     >
         {/* Add margin-left to the first card */}
-        <div className="amenity" style={{ padding: '3px', marginLeft: '100px', marginRight: 'auto' }}> 
+        <div className="amenity" style={{ padding: '3px', marginLeft: '100px', marginRight: 'auto' }}>
             <div className="amenity-image">
                 <img src="images/webimgs/clbhouse.jpg" alt="15000 sqft Clubhouse" style={{ width: '200px', height: '200px', objectFit: 'cover', borderRadius: '8px' }} />
             </div>
@@ -367,11 +390,14 @@ function ProjectDetails() {
             <p style={{ fontWeight: 'bold', fontSize: '1.1em', color: '#333', marginTop: '5px' }}>Kids Play Area</p>
         </div>
     </Slider>
-</div>
+                    </div>
          </div>
         </div>
+    </div>
     );
 }
-
+ 
 export default ProjectDetails;
-
+ 
+ 
+ 

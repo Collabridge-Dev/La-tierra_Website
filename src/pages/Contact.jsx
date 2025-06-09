@@ -77,7 +77,6 @@ function Contact() {
                       <div className="mt-icon-box-wraper left p-b40">
                         <div className="icon-xs"><i className="fa fa-phone"></i></div>
                         <div className="icon-content">
-                          <h5 className="m-t0 font-weight-500">Phone number</h5>
                           <p>(+91) 994 994 0333</p>
                         </div>
                       </div>
@@ -85,7 +84,6 @@ function Contact() {
                       <div className="mt-icon-box-wraper left p-b40">
                         <div className="icon-xs"><i className="fa fa-envelope"></i></div>
                         <div className="icon-content">
-                          <h5 className="m-t0 font-weight-500">Email address</h5>
                           <p>info@la-tierrainfra.com</p>
                         </div>
                       </div>
@@ -93,7 +91,6 @@ function Contact() {
                       <div className="mt-icon-box-wraper left">
                         <div className="icon-xs"><i className="fa fa-map-marker"></i></div>
                         <div className="icon-content">
-                          <h5 className="m-t0 font-weight-500">Address info</h5>
                           <p>#309, 3rd Floor, B Block, Asian Sun City, Kondapur,Hyderabad - 500084</p>
                         </div>
                       </div>

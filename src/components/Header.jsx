@@ -1,79 +1,228 @@
 import React, { useState } from 'react';
 
 function Header() {
-    // State to manage hover effect for each nav item
     const [hoveredItem, setHoveredItem] = useState(null);
+    const [menuOpen, setMenuOpen] = useState(false);
 
-    // Inline style for each navigation item
-    const navLinkStyle = (isHovered) => ({
+    // Get current path (converted to lowercase for consistency)
+    const currentPath = window.location.pathname.toLowerCase();
+
+    // Updated nav link style accepting both hover and active info
+    const navLinkStyle = (isHovered, isActive) => ({
         textTransform: 'uppercase',
-        fontSize: '16px',
-        padding: '10px',
-        transition: 'transform 0.3s ease-in-out', // Smooth transition for zoom
-        transform: isHovered ? 'scale(1.1)' : 'scale(1)', // Zoom-in effect on hover
-        color: isHovered ? '#ecc731' : 'black', // Change color on hover (optional)
+        fontSize: '17px',
+        padding: '12px 18px',
+        transition: 'transform 0.3s ease-out, color 0.3s',
+        transform: isHovered ? (isActive ? 'scale(1.05)' : 'scale(1.1)') : 'scale(1)',
+        color: isActive ? '#ecc731' : (isHovered ? '#ecc731' : '#222'),
+        background: isHovered ? '#fffbe6' : 'transparent',
+        borderRadius: '5px',
+        fontWeight: 600,
+        textDecoration: 'none',
+        display: 'block',
+        margin: '4px 0',
     });
 
-    // Style to add space between "Home" and "About Us"
+    // Home link custom style with zero left margin
     const homeStyle = {
-        ...navLinkStyle(hoveredItem === 'home'),
-        marginLeft: '40px', // Adjust this value to move it further left or right
+        ...navLinkStyle(hoveredItem === 'home', currentPath === '/'),
+        marginLeft: 0,
     };
 
+    // Hamburger button style
+    const hamburgerStyle = {
+        display: 'none',
+        flexDirection: 'column',
+        cursor: 'pointer',
+        width: '32px',
+        height: '32px',
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
+        right: '20px',
+        top: '34px',
+        zIndex: 1001,
+        background: '#fff',
+        border: '1px solid #eee',
+        borderRadius: '6px',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
+    };
+
+    // Nav container style (desktop)
+    const navContainerStyle = {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'flex-end',
+        background: 'transparent',
+        width: '100%',
+        padding: 0,
+        margin: 0,
+    };
+
+    // Mobile nav style (when open)
+    const mobileNavStyle = {
+        position: 'fixed',
+        top: '90px', // below header spacer
+        left: 0,
+        right: 0,
+        background: '#f9f9f9', // light background color
+        boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
+        padding: '15px 20px',
+        margin: 0,
+        borderTop: '1px solid #ddd',
+        zIndex: 999,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+        transition: 'transform 0.3s ease-out, opacity 0.3s ease-out',
+        transform: menuOpen ? 'translateY(0)' : 'translateY(-100%)',
+        opacity: menuOpen ? 1 : 0,
+    };
+
+    // Media query for mobile
+    const mediaQuery = `
+        @media (max-width: 900px) {
+            .desktop-nav {
+                display: none !important;
+            }
+            .hamburger {
+                display: flex !important;
+            }
+            .logo-header-inner img {
+                min-width: 140px !important;
+                height: 50px !important;
+            }
+        }
+        @media (min-width: 901px) {
+            .mobile-nav {
+                display: none !important;
+            }
+            .hamburger {
+                display: none !important;
+            }
+        }
+    `;
+
     return (
-        <div>{/*  <!-- HEADER START --> */}
-            <header className="site-header header-style-1 mobile-sider-drawer-menu">
-                <div className="sticky-header main-bar-wraper" style={{ position: 'sticky', top: 0, zIndex: 1000 }}>
-                    <div className="main-bar" style={{ backgroundColor: '#f1f1f1', paddingBottom: '10px' }}> {/* Reduced padding-bottom */}
-                        <div className="container">
-                            <div className="logo-header">
-                                <div className="logo-header-inner logo-header-one">
+        <div>
+            <style>{mediaQuery}</style>
+            <header className="site-header header-style-1 mobile-sider-drawer-menu" style={{
+                background: '#ffffff',
+                boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
+                position: 'fixed',
+                width: '100%',
+                top: 0,
+                left: 0,
+                zIndex: 1000
+            }}>
+                <div className="sticky-header main-bar-wraper">
+                    <div className="main-bar" style={{ backgroundColor: 'transparent', padding: '0', position: 'relative', minHeight: '90px' }}>
+                        <div className="container" style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'space-between', minHeight: '90px' }}>
+                            <div className="logo-header" style={{ flex: '0 0 auto', zIndex: 1400 }}>
+                                <div className="logo-header-inner logo-header-one" style={{ padding: '10px 0' }}>
                                     <a href="/">
-                                        <img src="images/BLACK- LA-TIERRA INFRA.png" alt="" style={{ minWidth: '240px', height: '95px' }} />
+                                        <img src="images/BLACK- LA-TIERRA INFRA.png" alt="" style={{ minWidth: '200px', height: '70px', objectFit: 'contain' }} />
                                     </a>
                                 </div>
                             </div>
-
-                            {/* MAIN Nav */}
-                            <div className="header-nav navbar-collapse collapse" style={{ position: 'sticky', top: '60px', zIndex: 999 }}>
-                                <ul className="nav navbar-nav" style={{ marginBottom: '-100px', paddingBottom: '0' }}>
+                            {/* Hamburger Icon */}
+                            <div
+                                className="hamburger"
+                                style={hamburgerStyle}
+                                onClick={() => setMenuOpen(!menuOpen)}
+                            >
+                                <div style={{ width: '24px', height: '3px', background: '#333', margin: '3px 0', borderRadius: '2px' }} />
+                                <div style={{ width: '24px', height: '3px', background: '#333', margin: '3px 0', borderRadius: '2px' }} />
+                                <div style={{ width: '24px', height: '3px', background: '#333', margin: '3px 0', borderRadius: '2px' }} />
+                            </div>
+                            {/* Desktop Nav */}
+                            <nav
+                                className="desktop-nav"
+                                style={navContainerStyle}
+                            >
+                                <ul className="nav navbar-nav" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', margin: 0, padding: 0, listStyle: 'none', gap: '8px' }}>
                                     <li
                                         onMouseEnter={() => setHoveredItem('home')}
                                         onMouseLeave={() => setHoveredItem(null)}
                                     >
-                                        <a href="/" style={homeStyle}>Home</a> {/* Apply custom home style */}
+                                        <a href="/" style={homeStyle}>Home</a>
                                     </li>
                                     <li
                                         onMouseEnter={() => setHoveredItem('about')}
                                         onMouseLeave={() => setHoveredItem(null)}
                                     >
-                                        <a href="/about" style={navLinkStyle(hoveredItem === 'about')}>About us</a>
+                                        <a href="/about" style={navLinkStyle(hoveredItem === 'about', currentPath === '/about')}>About us</a>
                                     </li>
                                     <li
                                         onMouseEnter={() => setHoveredItem('project')}
                                         onMouseLeave={() => setHoveredItem(null)}
                                     >
-                                        <a href="Project" style={navLinkStyle(hoveredItem === 'project')}>Communities</a>
+                                        <a href="/project" style={navLinkStyle(hoveredItem === 'project', currentPath === '/project')}>Communities</a>
                                     </li>
                                     <li
                                         onMouseEnter={() => setHoveredItem('studioz')}
                                         onMouseLeave={() => setHoveredItem(null)}
                                     >
-                                        <a href='Studioz' style={navLinkStyle(hoveredItem === 'studioz')}>Design Studioz</a>
+                                        <a href="/studioz" style={navLinkStyle(hoveredItem === 'studioz', currentPath === '/studioz')}>Design Studioz</a>
                                     </li>
                                     <li
                                         onMouseEnter={() => setHoveredItem('contact')}
                                         onMouseLeave={() => setHoveredItem(null)}
                                     >
-                                        <a href="Contact" style={navLinkStyle(hoveredItem === 'contact')}>Contact us</a>
+                                        <a href="/contact" style={navLinkStyle(hoveredItem === 'contact', currentPath === '/contact')}>Contact us</a>
                                     </li>
                                 </ul>
-                            </div>
+                            </nav>
                         </div>
                     </div>
                 </div>
             </header>
-            {/*  <!-- HEADER END --> */}
+            {/* Spacer to prevent content jumping under fixed header */}
+            <div style={{ height: '90px' }}></div>
+            {/* Mobile Nav with smooth transition */}
+            <div
+                className="mobile-nav"
+                style={mobileNavStyle}
+            >
+                <ul style={{ padding: 0, margin: 0, listStyle: 'none', width: '100%' }}>
+                    <li
+                        onClick={() => setMenuOpen(false)}
+                        onMouseEnter={() => setHoveredItem('home')}
+                        onMouseLeave={() => setHoveredItem(null)}
+                    >
+                        <a href="/" style={homeStyle}>Home</a>
+                    </li>
+                    <li
+                        onClick={() => setMenuOpen(false)}
+                        onMouseEnter={() => setHoveredItem('about')}
+                        onMouseLeave={() => setHoveredItem(null)}
+                    >
+                        <a href="/about" style={navLinkStyle(hoveredItem === 'about', currentPath === '/about')}>About us</a>
+                    </li>
+                    <li
+                        onClick={() => setMenuOpen(false)}
+                        onMouseEnter={() => setHoveredItem('project')}
+                        onMouseLeave={() => setHoveredItem(null)}
+                    >
+                        <a href="/project" style={navLinkStyle(hoveredItem === 'project', currentPath === '/project')}>Communities</a>
+                    </li>
+                    <li
+                        onClick={() => setMenuOpen(false)}
+                        onMouseEnter={() => setHoveredItem('studioz')}
+                        onMouseLeave={() => setHoveredItem(null)}
+                    >
+                        <a href="/studioz" style={navLinkStyle(hoveredItem === 'studioz', currentPath === '/studioz')}>Design Studioz</a>
+                    </li>
+                    <li
+                        onClick={() => setMenuOpen(false)}
+                        onMouseEnter={() => setHoveredItem('contact')}
+                        onMouseLeave={() => setHoveredItem(null)}
+                    >
+                        <a href="/contact" style={navLinkStyle(hoveredItem === 'contact', currentPath === '/contact')}>Contact us</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     );
 }

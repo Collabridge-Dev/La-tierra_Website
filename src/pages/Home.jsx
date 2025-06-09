@@ -5,17 +5,16 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
 function Home() {
-    const [filter, setFilter] = useState('*');
-    
-    // Sample project data
+  const [filter, setFilter] = useState('*');
+  const [isFirstHover, setIsFirstHover] = useState(false);
+  
+  // Sample project data
   const projectData = [
-  { imageSrc: "images/webimgs/RERA NO.png", title: "SILVER OAK RESIDENCES", location: "Tukkaguda", category: "cat-1", link: "/ProjectDetails" },
-  { imageSrc: "images/webimgs/up_coming.jpg", title: "Villas", location: "Adibatla", category: "cat-2", link: "/Upcoming" },
-  { imageSrc: "images/webimgs/up_coming.jpg", title: "High-Rise Residential", location: "Manchirevula", category: "cat-2", link: "/Upcoming" },
-];
-
+    { imageSrc: "images/webimgs/RERA NO.png", title: "SILVER OAK RESIDENCES", location: "Tukkaguda", category: "cat-1", link: "/ProjectDetails" },
+    { imageSrc: "images/webimgs/up_coming.jpg", title: "Villas", location: "Adibatla", category: "cat-2", link: "/Upcoming" },
+    { imageSrc: "images/webimgs/up_coming.jpg", title: "High-Rise Residential", location: "Manchirevula", category: "cat-2", link: "/Upcoming" },
+  ];
   
     // Filter handler
     const handleFilterChange = (category) => {
@@ -52,7 +51,7 @@ function Home() {
         textAlign: "center",
         zIndex: 2, // Ensure figcaption appears above the image
         fontSize: "24px", // Adjust this value to make the text larger or smaller
-        fontWeight: "bold", // Optional: Makes the text bold
+        fontWeight: "bold",
       };
   
     // Slider settings
@@ -81,7 +80,83 @@ function Home() {
       }, */
     ];
   return (
-    <div> 
+    <div>
+      {/* Inline responsive styles */}
+ <style>{`
+  /* Mobile (max-width: 768px) */
+  @media (max-width: 768px) {
+    .slider-container {
+      height: 300px !important;
+    }
+    .image-container {
+      height: 300px !important;
+    }
+    .section-full.mobile-page-padding {
+      padding: 40px 10px !important;
+    }
+    .container {
+      padding: 0 10px !important;
+    }
+    /* Video presentation overrides */
+    .video-section-full {
+      width: 100% !important;
+      height: auto !important;
+      background-size: cover !important;
+    }
+    .video-section-inner,
+    .video-section-content {
+      padding: 10px !important;
+    }
+    /* Remove left margin on the video column */
+    .col-lg-5.col-md-6 {
+      margin-left: 0 !important;
+    }
+    /* Portfolio card adjustments */
+    .portfolio-section .custom-card {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-left: 5px !important;
+      padding-right: 5px !important;
+    }
+    /* Optional: adjust get-in-touch image */
+    .get-in-touch-form-section-img img {
+      width: 100% !important;
+      height: auto !important;
+      margin-left: 0 !important;
+    }
+  }
+  /* Tablet (min-width: 769px and max-width: 1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .slider-container {
+      height: 350px !important;
+    }
+    .image-container {
+      height: 350px !important;
+    }
+    .section-full.mobile-page-padding {
+      padding: 60px 20px !important;
+    }
+    .container {
+      padding: 0 20px !important;
+    }
+  }
+  /* Desktop (min-width: 1025px) */
+  @media (min-width: 1025px) {
+    .slider-container {
+      height: 450px !important;
+    }
+    .image-container {
+      height: 450px !important;
+    }
+    .section-full.mobile-page-padding {
+      padding: 80px 40px !important;
+    }
+    .container {
+      padding: 0 40px !important;
+    }
+  }
+`}</style>
+      
          {/* <!-- CONTENT START --> */}
     <div className="page-content">
     
@@ -195,51 +270,54 @@ function Home() {
                 <div className="col-lg-4 col-md-12">
                     {/* <!-- TITLE START --> */}
                     <div className="section-head">
-                        <div className="mt-separator-outer separator-left">
-                            <div className="mt-separator">
-                                <h2 className="text-uppercase sep-line-one">
-                                    <span className="font-weight-300 site-text-primary">Our</span> Value
-                                </h2>
-                            </div>
-                            <p>
-                                We prioritize honesty, quality, and customer satisfaction, fostering a culture of creativity, collaboration, and continuous improvement to create living experiences that elevate the soul.
-                            </p>
-                        </div>
-                    </div>
-                    {/* <!-- TITLE END --> */}
-                    <div className="author-info p-t20">
-                        {/* <div className="author-signature">
-                            <img src="images/Signature%2bBlack.png" alt="Signature" width="150" />
-                        </div> */}
-                        <div className="author">
-                            <h4 className="m-t0">Suresh Kapa</h4>
-                            <p>Founder & CEO</p>
-                        </div>
-                    </div>
+    <div className="mt-separator-outer separator-left">
+        <div className="mt-separator">
+            <h2 className="text-uppercase sep-line-one">
+                <span className="font-weight-300 site-text-primary">Our</span> Value
+            </h2>
+        </div>
+  <p style={{ textAlign: "justify", whiteSpace: "pre-wrap" }}>
+    We prioritize honesty, quality, and customer satisfaction, fostering a culture of creativity,
+    collaboration, and continuous improvement to create living experiences that elevate the soul.
+    Our commitment goes beyond delivering exceptional products and services—we strive to build lasting
+    relationships with our customers, grounded in trust and mutual respect.
+    Through innovative design, sustainable practices, and a deep understanding of individual needs,
+    we aim to craft spaces that inspire, nurture well-being, and enhance everyday life.
+    At the heart of everything we do is a passion for excellence and a belief that true success is measured
+    by the positive impact we make in the lives of those we serve.
+</p>
+        <div className="author-info p-t20" style={{ marginLeft: '220px', marginTop: '-30px' }}>
+     <div className="author">
+    <h4 className="m-t0" style={{ marginBottom: '0' }}>-Suresh Kapa</h4>
+    <p style={{ margin: 0, lineHeight: '1.2',marginLeft:'10px' }}>Founder & CEO</p>
+</div>
+        </div>
+    </div>
+</div>
                     
                 </div>
 
                 
 
                 <div className="col-lg-5 col-md-6" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',marginLeft:'120px',marginTop:'40px' }}>
-                <div className="video-section-full bg-no-repeat bg-cover overlay-wraper" style={{ backgroundImage: "url('images/video-bg.jpg')",height:'400px',width:'800px' }}>
-                        <div className="overlay-main bg-black opacity-07"></div>
-                        <div className="video-section-inner">
-                            <div className="video-section-content">
-                                <div className="video-section-left">
-                                    <a href="https://player.vimeo.com/video/34741214?color=ffffff&amp;title=0&amp;byline=0&amp;portrait=0" className="mfp-video play-now">
-                                        <i className="icon fa fa-play"></i>
-                                        <span className="ripple"></span>
-                                    </a>
-                                </div>
-                                <div className="video-section-right">
-                                    <a href="https://player.vimeo.com/video/34741214?color=ffffff&amp;title=0&amp;byline=0&amp;portrait=0" className="mfp-video font-weight-600 text-uppercase">
-                                        Video Presentation
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>  
+           <div className="video-section-full bg-no-repeat bg-cover overlay-wraper" style={{ backgroundImage: "url('images/video-bg.jpg')", height: '400px', width: '800px' }}>
+    <div className="overlay-main bg-black opacity-07"></div>
+    <div className="video-section-inner">
+        <div className="video-section-content">
+            <div className="video-section-left">
+                <a href="/images/La-Tierra Infra.mp4" className="mfp-video play-now">
+                    <i className="icon fa fa-play"></i>
+                    <span className="ripple"></span>
+                </a>
+            </div>
+            <div className="video-section-right">
+                <a href="/images/La-Tierra Infra" className="mfp-video font-weight-600 text-uppercase">
+                    Video Presentation
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
                 </div>
             </div>
         </div>
@@ -266,7 +344,7 @@ function Home() {
                         <div className="col-lg-4 col-md-6">
                             <div className="mission-left bg-white m-b30 p-a30 bg-no-repeat bg-bottom-left" style={{backgroundImage:"url('images/background/bg-site.png')", height:'462px'}}>
                                 <h3 className="m-t0"> Mission</h3>
-                                <p>At La-Tierra Infra, we’re dedicated to redefining luxury living by creating homes that blend comfort, elegance, and quality seamlessly. With meticulous craftsmanship and a commitment to excellence, we strive to make luxury living accessible to all, enriching lives and communities in the process.</p>
+                                <p style={{ textAlign: "justify", whiteSpace: "pre-wrap" }}>At La-Tierra Infra, we’re dedicated to redefining luxury living by creating homes that blend comfort, elegance, and quality seamlessly. With meticulous craftsmanship and a commitment to excellence, we strive to make luxury living accessible to all, enriching lives and communities in the process.</p>
                                 <ul className="list-angle-right anchor-line">
                                     {/* <li><a href="Project">Construction Management</a></li>
                                     <li><a href="Project">Pre Construction Services</a></li>
@@ -287,7 +365,7 @@ function Home() {
                         <div className="col-lg-4 col-md-6">
                             <div className="mission-left bg-white m-b30 p-a30 bg-no-repeat bg-bottom-left" style={{backgroundImage:"url('images/background/bg-site.png')", height:'462px'}}>
                                 <h3 className="m-t0"> Vision</h3>
-                                <p>Our vision is to lead the industry in reshaping luxury living, setting new standards for affordability, innovation, and excellence. Through our dedication to quality and visionary design, we aim to inspire awe with every project, making luxury living attainable for everyone.</p>
+                                <p style={{ textAlign: "justify", whiteSpace: "pre-wrap" }}>Our vision is to lead the industry in reshaping luxury living, setting new standards for affordability, innovation, and excellence. Through our dedication to quality and visionary design, we aim to inspire awe with every project, making luxury living attainable for everyone.</p>
                                 <ul className="list-angle-right anchor-line">
                                     {/* <li><a href="Project">Construction Management</a></li>
                                     <li><a href="Project">Pre Construction Services</a></li>
@@ -779,22 +857,9 @@ function Home() {
                         
                     
                         <div className="get-in-touch-form-section" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-    <div className="get-in-touch-info arrow-animation" style={{ flex: 1 }}>
-        <div className="mt-icon-box-wraper p-a20 left bg-white hover-shadow">
-            <div className="icon-md m-b20 scale-in-center">
-                <span className="icon-cell text-secondry">
-                    <img src="images/icon/icon-img-01.png" alt=""/>
-                </span>
-            </div>
-            <div className="icon-content">
-                <h4 className="mt-tilte m-b0">Great Experience for Building Construction & Renovation</h4>
-            </div>
-        </div>
-    </div>
+ 
     
-    <div className="get-in-touch-form-section-img" style={{ flex: 1, textAlign: 'right' }}>
-  <img src="/images/s-pic-2.jpg" alt="" style={{ width: '700px', height: '500px',marginLeft:'60px',marginBottom:'0px' }} />
-</div>
+
 
 </div>
              
@@ -851,11 +916,20 @@ function Home() {
                   <div className="mt-thum-bx">
                     <img src={project.imageSrc} alt={project.title} />
                   </div>
-                  <div className="mt-info p-t20 text-white">
+                  <div
+                    // Add text-white only if not the first project
+                    className={ index === 0 ? "mt-info p-t20" : "mt-info p-t20 text-white" }
+                    style={
+                      index === 0
+                        ? { color: isFirstHover ? "white" : "black" }
+                        : {}
+                    }
+                    onMouseEnter={() => { if (index === 0) setIsFirstHover(true); }}
+                    onMouseLeave={() => { if (index === 0) setIsFirstHover(false); }}
+                  >
                     <h4 className="mt-title m-b10 m-t0">{project.title}</h4>
                     <p className="m-b0">{project.location}</p>
                   </div>
-                  {/* Dynamic Link based on project */}
                   <Link to={project.link} className="project-link"></Link>
                 </div>
               </div>
@@ -900,6 +974,7 @@ function Home() {
                             </div>
                         </div>
                     </div>                   
+
                   {/*   <!-- TITLE END -->  */}
                     
                       {/*   <!-- TESTIMONIAL START -->    */}
@@ -989,11 +1064,16 @@ function Home() {
                     {/*     <!-- TITLE END --> */}
                     <div class="section-content">
                     
+                    </div>                  
+                    {/*     <!-- TITLE END --> */}
+                    <div class="section-content">
+                    
                         {/* <!-- TESTIMONIAL 4 START ON BACKGROUND -->    */}
                         <div class="section-content">
                              <div class="section-content p-tb10 owl-btn-vertical-center">
                                 <div class="owl-carousel home-client-carousel-2">
                                 
+
                                     <div class="item">
                                         <div class="ow-client-logo">
                                             <div class="client-logo client-logo-media">

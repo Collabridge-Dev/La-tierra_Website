@@ -83,7 +83,7 @@ function About() {
                             <span className="large-title-info">Years of Experience</span>
                         </div>
                         <h3 className="font-weight-600">Improving quality of life with an integrated unified approach.</h3>
-                        <p>At La-Tierra Infra, our mission and vision are deeply rooted in the belief that everyone deserves access to high-quality living. We are passionate about building homes that redefine the concept of affordable elegance, where comfort, style, and quality come together seamlessly.</p>
+                        <p style={{ textAlign: "justify", whiteSpace: "pre-wrap" }}>At La-Tierra Infra, our mission and vision are deeply rooted in the belief that everyone deserves access to high-quality living. We are passionate about building homes that redefine the concept of affordable elegance, where comfort, style, and quality come together seamlessly.</p>
                         <div className="author-info p-t20">
                             {/* <div className="author-signature">
                                 <img src="images/Signature%2bBlack.png" alt="Signature" width="150"/>
@@ -132,7 +132,7 @@ function About() {
                                         </div>
                                         <div class="icon-content">
                                             <h4 class="mt-tilte m-b25">Building <br/>Construction</h4>
-                                            <p>We deliver high-quality construction services focused on safety, durability, and timely completion.</p>
+                                            <p >We deliver high-quality construction services focused on safety, durability, and timely completion.</p>
                                            
                                         </div>
                                     </div>
@@ -227,7 +227,6 @@ function About() {
                               <div class="figcaption">
                                 <h4>Suresh Kapa </h4>
                                 <h5>Ceo & Founder</h5>
-                                <p>Which is worse, that everyone has his price, or that the price is always so low.</p>
                                 {/* <div class="icons">
                                     <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
                                     <a href="https://twitter.com/"> <i class="fa fa-twitter"></i></a>
@@ -247,7 +246,6 @@ function About() {
                               <div class="figcaption">
                                 <h4>Mahesh Kapa </h4>
                                 <h5>COO </h5>
-                                <p>Which is worse, that everyone has his price, or that the price is always so low.</p>
                                 {/* <div class="icons">
                                     <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
                                     <a href="https://twitter.com/"> <i class="fa fa-twitter"></i></a>
