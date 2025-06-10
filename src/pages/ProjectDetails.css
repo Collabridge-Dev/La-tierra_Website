@@ -1,0 +1,428 @@
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+  /* Banner section */
+  .mt-bnr-inr {
+    min-height: 150px !important;
+  }
+
+  .banner-title-name h2 {
+    font-size: 24px !important;
+  }
+
+  /* Navigation */
+  .nav-pills {
+    display: flex;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 15px;
+  }
+
+  .nav-pills .nav-link {
+    white-space: nowrap;
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  /* Project Details Box */
+  .proj_detls {
+    margin-top: 20px;
+    padding: 10px !important;
+  }
+
+  .dims_dtls h4 {
+    font-size: 16px;
+  }
+
+  .list p {
+    font-size: 14px;
+  }
+
+  /* Floor Plans */
+  .floor_plan .d-flex {
+    flex-direction: column !important;
+  }
+
+  .flr_pln_typ {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-right: none !important;
+  }
+
+  .flr_pln_typ .nav-link {
+    white-space: nowrap;
+    margin-right: 10px;
+    margin-bottom: 0 !important;
+  }
+
+  .tab-content img {
+    width: 100% !important;
+    max-width: 300px !important;
+    height: auto !important;
+    margin: 10px auto !important;
+    display: block;
+  }
+
+  /* Site Map */
+  .site_map_cont img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto;
+  }
+
+  /* Amenities Slider */
+  .amenities-slider {
+    padding: 0 !important;
+  }
+
+  .amenity {
+    padding: 5px !important;
+  }
+
+  .amenity-image img {
+    width: 100% !important;
+    max-width: 250px !important;
+    margin: 0 auto;
+  }
+
+  .amenity p {
+    font-size: 14px !important;
+    text-align: center;
+  }
+
+  /* Modal */
+  .modal-dialog {
+    margin: 10px;
+    max-width: 95%;
+  }
+
+  .modal-content {
+    padding: 10px;
+  }
+
+  .modal-body img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Carousel */
+  .carousel-inner .carousel-item img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .carousel-indicators {
+    margin-bottom: 0;
+  }
+
+  /* General Spacing */
+  .m-b30 {
+    margin-bottom: 20px !important;
+  }
+
+  .p-t40 {
+    padding-top: 20px !important;
+  }
+
+  .p-b40 {
+    padding-bottom: 20px !important;
+  }
+
+  /* Grid Adjustments */
+  .col-md-4, .col-md-8 {
+    padding: 0 10px;
+  }
+
+  /* Project Details List */
+  .proj_main_lst .row {
+    margin: 0 !important;
+  }
+
+  .proj_main_lst .col-md-6 {
+    padding: 5px !important;
+  }
+
+  /* Fix horizontal scrolling */
+  .page-content {
+    overflow-x: hidden;
+  }
+
+  /* Make images responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Additional styles for tablets */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .amenity-image img {
+    width: 180px !important;
+    height: 180px !important;
+  }
+
+  .tab-content img {
+    width: 200px !important;
+    margin: 5px !important;
+  }
+}
+/* Banner section mobile styles */
+@media screen and (max-width: 768px) {
+  .mt-bnr-inr {
+    min-height: 180px !important;
+    padding: 15px !important;
+    display: flex;
+    align-items: center;
+  }
+
+  .mt-bnr-inr-entry {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .banner-title-name h2 {
+    font-size: 22px !important;
+    line-height: 1.2;
+    margin-bottom: 5px !important;
+    padding: 0 10px;
+  }
+
+  .banner-title-name h5 {
+    font-size: 16px !important;
+    margin-bottom: 10px;
+  }
+
+  .mt-breadcrumb {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 10px 0 0 0;
+    list-style: none;
+  }
+
+  .mt-breadcrumb li {
+    font-size: 14px;
+    padding: 0 5px;
+    color: #fff;
+  }
+
+  .mt-breadcrumb li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .overlay-main {
+    opacity: 0.8 !important;
+  }
+}
+
+/* Banner styles */
+.mobile-banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.mt-bnr-inr-entry {
+  width: 100%;
+  max-width: 600px;
+}
+
+.banner-title-name h2 {
+  color: white;
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.banner-title-name h5 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.mt-breadcrumb {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.mt-breadcrumb li {
+  color: white;
+  font-size: 16px;
+}
+
+.mt-breadcrumb li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Mobile specific styles */
+@media screen and (max-width: 768px) {
+  .mobile-banner {
+    min-height: 180px !important;
+  }
+
+  .banner-content {
+    padding: 15px 10px;
+  }
+
+  .banner-title-name h2 {
+    font-size: 22px;
+    line-height: 1.2;
+    margin-bottom: 5px;
+  }
+
+  .banner-title-name h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .mt-breadcrumb {
+    gap: 5px;
+  }
+
+  .mt-breadcrumb li {
+    font-size: 14px;
+  }
+}
+
+/* Overlay styles */
+.overlay-wraper {
+  position: relative;
+}
+
+.overlay-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Reset any potential conflicting styles */
+.mobile-banner {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 250px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+}
+
+.banner-content {
+  position: relative !important;
+  z-index: 2 !important;
+  width: 100% !important;
+  padding: 20px !important;
+}
+
+.mt-bnr-inr-entry {
+  width: 100% !important;
+  position: relative !important;
+  z-index: 3 !important;
+  text-align: center !important;
+}
+
+.banner-title-name {
+  margin-bottom: 15px !important;
+}
+
+.banner-title-name h2 {
+  color: white !important;
+  font-size: 28px !important;
+  margin-bottom: 10px !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+}
+
+.banner-title-name h5 {
+  color: white !important;
+  font-size: 18px !important;
+  margin-bottom: 15px !important;
+  text-align: center !important;
+}
+
+.mt-breadcrumb {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 10px !important;
+}
+
+.mt-breadcrumb li {
+  color: white !important;
+  font-size: 16px !important;
+}
+
+.mt-breadcrumb li a {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.overlay-main {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  z-index: 1 !important;
+}
+
+/* Mobile specific overrides */
+@media screen and (max-width: 768px) {
+  .mobile-banner {
+    min-height: 200px !important;
+  }
+
+  .banner-content {
+    padding: 15px 10px !important;
+  }
+
+  .banner-title-name h2 {
+    font-size: 22px !important;
+    line-height: 1.2 !important;
+  }
+
+  .banner-title-name h5 {
+    font-size: 16px !important;
+  }
+
+  .mt-breadcrumb {
+    gap: 5px !important;
+  }
+
+  .mt-breadcrumb li {
+    font-size: 14px !important;
+  }
+
+  /* Force the background image to cover */
+  .bg-parallax {
+    background-attachment: scroll !important;
+    background-position: center center !important;
+    background-size: cover !important;
+  }
+}

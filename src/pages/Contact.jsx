@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 function Contact() {
+  useEffect(() => {
+    const bannerElements = document.querySelectorAll('[data-bg-image]');
+    bannerElements.forEach(element => {
+      const bgImage = element.getAttribute('data-bg-image');
+      element.style.backgroundImage = `url(${bgImage})`;
+    });
+  }, []);
+
   return (
     <div>
       {/* CONTENT START */}
       <div className="page-content">
         
         {/* INNER PAGE BANNER */}
-        <div className="mt-bnr-inr overlay-wraper bg-parallax bg-top-center" data-stellar-background-ratio="0.5" style={{ backgroundImage: "url('/images/Webimgs/64.jpg')" }}>
+        <div className="mt-bnr-inr overlay-wraper bg-parallax bg-top-center" data-stellar-background-ratio="0.5"
+         data-bg-image="/images/Webimgs/64.jpg">
           <div className="overlay-main bg-black opacity-07"></div>
           <div className="container">
             <div className="mt-bnr-inr-entry">

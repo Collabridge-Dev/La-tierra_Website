@@ -82,7 +82,7 @@ function Home() {
   return (
     <div>
       {/* Inline responsive styles */}
- <style>{`
+<style>{`
   /* Mobile (max-width: 768px) */
   @media (max-width: 768px) {
     .slider-container {
@@ -124,6 +124,21 @@ function Home() {
       height: auto !important;
       margin-left: 0 !important;
     }
+    
+    /* New mobile-specific rules for Testimonials and Partners */
+    .owl-carousel.testimonial-home .item {
+      display: block !important;
+      width: 100% !important;
+      margin-bottom: 15px;
+    }
+    .owl-carousel.home-client-carousel-2 {
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+    }
+    .owl-carousel.home-client-carousel-2 .item {
+      flex: 0 0 48% !important;
+      margin: 1% !important;
+    }
   }
   /* Tablet (min-width: 769px and max-width: 1024px) */
   @media (min-width: 769px) and (max-width: 1024px) {
@@ -156,6 +171,8 @@ function Home() {
     }
   }
 `}</style>
+
+
       
          {/* <!-- CONTENT START --> */}
     <div className="page-content">
@@ -1071,52 +1088,61 @@ function Home() {
                         {/* <!-- TESTIMONIAL 4 START ON BACKGROUND -->    */}
                         <div class="section-content">
                              <div class="section-content p-tb10 owl-btn-vertical-center">
-                                <div class="owl-carousel home-client-carousel-2">
-                                
-
-                                    <div class="item">
-                                        <div class="ow-client-logo">
-                                            <div class="client-logo client-logo-media">
-                                            <a href="about"><img src="/images/webimgs/BLACK - LA-TIERRA DESIGN STUDIO.png" alt="design studioz" /></a></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="item">
-                                        <div class="ow-client-logo">
-                                            <div class="client-logo client-logo-media">
-                                            <a href="about-1.html"><img src="/images/webimgs/Collabridge logo R 1.png" alt="collabridge" style={{minWidth:'180px'}}/></a></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="item">
-                                        <div class="ow-client-logo">
-                                            <div class="client-logo client-logo-media">
-                                            <a href="about-1.html"><img src="/images/webimgs/kapa-logo.png" alt=""/></a></div>
-                                        </div>
-                                    </div>
-                                    
-                                    {/* <div class="item">
-                                        <div class="ow-client-logo">
-                                            <div class="client-logo client-logo-media">
-                                            <a href="about-1.html"><img src="images/client-logo/w4.png" alt=""/></a></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="item">
-                                        <div class="ow-client-logo">
-                                            <div class="client-logo client-logo-media">
-                                            <a href="about-1.html"><img src="images/client-logo/w5.png" alt=""/></a></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="item">
-                                        <div class="ow-client-logo">
-                                            <div class="client-logo client-logo-media">
-                                            <a href="about-1.html"><img src="images/client-logo/w6.png" alt=""/></a></div>
-                                        </div>
-                                    </div> */}
-                                    
-                                </div>
+                                <div
+  className="owl-carousel home-client-carousel-2"
+  style={{ display: 'flex', flexWrap: 'nowrap', alignItems: 'center' }}
+>
+  <div className="item" style={{ flex: '0 0 auto', marginRight: '10px' }}>
+    <div className="ow-client-logo">
+   <div className="client-logo client-logo-media">
+  <a href="#">
+    <img
+      src="/images/webimgs/BLACK - LA-TIERRA DESIGN STUDIO.png"
+      alt="design studioz"
+      style={{ transform: 'scale(1.5) translateY(-15%)', transformOrigin: 'center center' }}
+    />
+  </a>
+</div>
+    </div>
+  </div>
+  
+  <div className="item" style={{ flex: '0 0 auto', marginRight: '10px' }}>
+    <div className="ow-client-logo">
+      <div className="client-logo client-logo-media">
+        <a href="#">
+          <img
+            src="/images/webimgs/Collabridge logo R 1.png"
+            alt="collabridge"
+            style={{ minWidth: '180px' }}
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div className="item" style={{ flex: '0 0 auto' }}>
+    <div className="ow-client-logo">
+      <div className="client-logo client-logo-media">
+        <a href="#">
+          <img src="/images/webimgs/kapa-logo.png" alt="" />
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  {/* Uncomment additional items if needed */}
+  {/* 
+  <div className="item" style={{ flex: '0 0 auto', marginRight: '10px' }}>
+    <div className="ow-client-logo">
+      <div className="client-logo client-logo-media">
+        <a href="about-1.html">
+          <img src="images/client-logo/w4.png" alt=""/>
+        </a>
+      </div>
+    </div>
+  </div>
+  */}
+</div>
                             </div>
                         </div>
                     </div>

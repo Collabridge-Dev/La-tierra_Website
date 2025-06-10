@@ -72,8 +72,8 @@ function Project() {
 
   const projects = [
     { id: 1, category: 'cat-1', image: '/images/webimgs/RERA NO.png', title: 'SILVER OAK RESIDENCES', description: "Serenity Villas is an exclusive residential development designed to offer a blend of luxury and comfort.", detailPage: '/ProjectDetails' },
-    { id: 2, category: 'cat-2', image: '/images/webimgs/up_coming.jpg', title: 'Villas', description: "We are so busy watching out for what's just ahead of us that we don't take the time to enjoy where we are.", detailPage: '/Upcoming' },
-    { id: 3, category: 'cat-2', image: '/images/webimgs/up_coming.jpg', title: 'High-Rise Residential', description: "We are so busy watching out for what's just ahead of us that we don't take the time to enjoy where we are.", detailPage: '/projectdetail1' },
+    { id: 2, category: 'cat-2', image: '/images/webimgs/coming.jpg', title: 'Villas', description: "We are so busy watching out for what's just ahead of us that we don't take the time to enjoy where we are.", detailPage: '/Upcoming' },
+    { id: 3, category: 'cat-2', image: '/images/webimgs/under-1.jpg', title: 'High-Rise Residential', description: "We are so busy watching out for what's just ahead of us that we don't take the time to enjoy where we are.", detailPage: '/projectdetail1' },
   ];
 
   // Inline styles

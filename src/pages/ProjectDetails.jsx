@@ -3,13 +3,14 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Nav from '../components/Nav';
+import './ProjectDetails.css';
  
-// Add a custom container class that's narrower than the default Bootstrap container
+// Update the custom container class that's narrower than the default Bootstrap container
 const customContainerStyle = {
-//   maxWidth: '1130px',  // Reduced from default 1320px
   margin: '0 auto',
   padding: '0 15px',
-  width: '90%'
+  width: '100%',
+  maxWidth: '1400px'
 };
  
 // Add this style object at the top with your other styles
@@ -18,8 +19,90 @@ const stickyNavStyle = {
   top: '90px', // Height of the header
   backgroundColor: 'white',
   zIndex: 999,
+
   boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
   transition: 'all 0.3s ease'
+};
+ 
+// Add these responsive styles at the top
+const responsiveStyles = {
+  container: {
+    margin: '0 auto',
+    padding: '0 15px',
+    width: '100%',
+    maxWidth: '1400px',
+    '@media (max-width: 768px)': {
+      padding: '0 10px'
+    }
+  },
+  carouselContainer: {
+    '@media (max-width: 768px)': {
+      marginBottom: '20px'
+    }
+  },
+  floorPlanContainer: {
+    '@media (max-width: 768px)': {
+      flexDirection: 'column',
+      alignItems: 'center'
+    }
+  },
+  floorPlanNav: {
+    '@media (max-width: 768px)': {
+      flexDirection: 'row',
+      marginBottom: '20px',
+      width: '100%',
+      overflowX: 'auto'
+    }
+  },
+  floorPlanImages: {
+    '@media (max-width: 768px)': {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: '10px'
+    }
+  },
+  floorPlanImage: {
+    '@media (max-width: 768px)': {
+      width: '100%',
+      maxWidth: '300px',
+      height: 'auto',
+      marginRight: '0'
+    }
+  }
+};
+
+// Update the amenities slider responsive settings
+const sliderSettings = {
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  centerMode: true,
+  centerPadding: "0",
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        centerPadding: "0",
+        arrows: false
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerPadding: "0",
+        arrows: false,
+        dots: true
+      }
+    }
+  ]
 };
  
 function ProjectDetails() {
@@ -29,11 +112,31 @@ function ProjectDetails() {
         <div>
             {/* <!-- CONTENT START --> */}
             <div className="page-content">
-                {/* <!-- INNER PAGE BANNER --> */}
-              <div className="mt-bnr-inr overlay-wraper bg-parallax bg-top-center" data-stellar-background-ratio="0.5" style={{ backgroundImage: "url('images/banner/5.jpg')", position: 'relative', height: '400px' }}>
+{/* <!-- INNER PAGE BANNER --> */}
+<div className="mt-bnr-inr overlay-wraper bg-parallax bg-top-center"
+ data-stellar-background-ratio="0.5"
+data-bg-image="/images/banner/5.jpg"
+ style={{ 
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    minHeight: '300px'
+}}>
     <div className="overlay-main bg-black opacity-07"></div>
-    <div style={{ ...customContainerStyle, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', height: '100%' }}>  {/* Center content */}
-        <div className="mt-bnr-inr-entry">
+    <div style={{
+        ...customContainerStyle,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'relative',
+        zIndex: 1
+    }}>
+        <div className="mt-bnr-inr-entry" style={{
+            textAlign: 'center',
+            padding: '30px 0',
+            width: '100%',
+            maxWidth: '800px'
+        }}>
             <div className="banner-title-outer">
                 <div className="banner-title-name">
                     <h2 className="m-b0">SILVER OAK RESIDENCES</h2>
@@ -43,7 +146,7 @@ function ProjectDetails() {
             {/* <!-- BREADCRUMB ROW --> */}
             <div>
                 <ul className="mt-breadcrumb breadcrumb-style-2">
-                    <li><a href="Project">Commnunities</a></li>
+                    <li><a href="Project">Communities</a></li>
                     <li>Project Detail</li>
                 </ul>
             </div>
@@ -51,7 +154,9 @@ function ProjectDetails() {
         </div>
     </div>
 </div>
-                {/* <!-- INNER PAGE BANNER END --> */}
+{/* <!-- INNER PAGE BANNER END --> */}
+               
+ 
                
                 {/* Update the Nav section with new sticky style */}
                 <div style={stickyNavStyle}>
@@ -59,14 +164,19 @@ function ProjectDetails() {
                 </div>
  
                 {/* <!-- SECTION CONTENT START --> */}
-                <div id="details" className="section-full p-tb80 inner-page-padding">
-                    <div style={customContainerStyle}>  {/* Replace className="container" with style={customContainerStyle} */}
+                <div id="details" className="section-full p-t40 p-b40 inner-page-padding">
+                  <div style={{
+            ...customContainerStyle,
+            padding: '0 15px', // Increased padding
+            width: '100%', // Full width on mobile
+            maxWidth: '1400px' // Added max-width for larger screens
+        }}>  {/* Replace className="container" with style={customContainerStyle} */}
                         <div className="project-detail-outer">
                             {/* images and details start */}
                             <div  className="m-b30">
-                                <div className="row">
-                                    <div className="col-md-8">
-                                        <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="true">
+                                <div className="row g-2"> {/* Added row gutter */}
+                                    <div className="col-md-8 mb-3"> {/* Added bottom margin */}
+                                        <div id="carouselExampleIndicators" className="carousel slide mobile-carousel" data-bs-ride="true">
                                             <div className="carousel-indicators">
                                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -111,7 +221,7 @@ function ProjectDetails() {
                                         </div>
                                     </div>
                                     <div className="col-md-4">
-                                        <div className="proj_detls border border-4 border-warning p-3">
+                                        <div className="proj_detls border border-4 border-warning p-2"> {/* Reduced padding */}
                                             <div className="dims_dtls text-center border-bottom border-1 border-dark">
                                                 <h4>Sq Ft. 3450 - 3890</h4>
                                                 <h4>Sq. YDS. 211.54 - 238</h4>
@@ -167,7 +277,7 @@ function ProjectDetails() {
                             {/* images and details end */}
                        {/* floor plan start */}
 <div className="m-b30">
-    <div className="floor_plan">
+    <div className="floor_plan mobile-floor-plan">
         <div className="section-head">
             <div className="mt-separator-outer separator-center">
                 <div id="floor-plans" className="mt-separator">
@@ -303,33 +413,27 @@ function ProjectDetails() {
                         <Slider
         dots={true}
         infinite={true}
-        speed={300}  // Reduced the speed for faster sliding
-        slidesToShow={3}  // Shows 3 slides at a time
-        slidesToScroll={1} // Scrolls one slide at a time
-        autoplay={true}  // Enable automatic sliding
-        autoplaySpeed={2000}  // Slide every 2 seconds (faster sliding speed)
-        centerMode={true}  // Centers the current slide
+        speed={300}
+        slidesToShow={3}
+        slidesToScroll={1}
+        autoplay={true}
+        autoplaySpeed={2000}
+        centerMode={true}
+        centerPadding="0" // Remove extra padding
+        className="amenities-slider mobile-amenities" // Add custom class for styling
         responsive={[
             {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 1,
-                    centerMode: true,  // Centers the current slide for responsiveness
-                },
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    centerMode: true,  // Centers the current slide for responsiveness
+                    centerPadding: "0",
+                    arrows: false, // Hide arrows on mobile
                 },
             },
         ]}
     >
-        {/* Add margin-left to the first card */}
-        <div className="amenity" style={{ padding: '3px', marginLeft: '100px', marginRight: 'auto' }}>
+        {/* Update the first amenity div's style */}
+        <div className="amenity" style={{ padding: '3px', margin: '0 auto' }}>
             <div className="amenity-image">
                 <img src="/images/webimgs/clbhouse.jpg" alt="15000 sqft Clubhouse" style={{ width: '200px', height: '200px', objectFit: 'cover', borderRadius: '8px' }} />
             </div>
@@ -398,6 +502,3 @@ function ProjectDetails() {
 }
  
 export default ProjectDetails;
- 
- 
- 

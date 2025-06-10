@@ -201,73 +201,7 @@ function About() {
          </div>   
 {/*         <!-- OUR SPECIALLIZATION END -->           */}   
 
-{/*         <!-- OUR TEAM START --> */}        
-        <div class="section-full our-team-4-wrap p-t80 p-b50 bg-white inner-page-padding">
-            <div class="container">
-            
-{/*                 <!-- TITLE START --> */}                
-                <div class="section-head">
-                    <div class="mt-separator-outer separator-center">
-                        <div class="mt-separator">
-                            <h2 class="text-uppercase sep-line-one "><span class="font-weight-300 site-text-primary">Our</span> Team</h2>
-                        </div>
-                    </div>
-                </div>                  
-            
-                    {/*  <!-- TITLE END -->     */}           
- 
-               {/*  <!-- IMAGE Team START --> */}
-                <div class="section-content">
-                    <div class="row d-flex justify-content-center">
-                    
-                        <div class="col-lg-4 col-md-6 m-b30">
-                        
-                            <div class="our-team-1 hover-animation-1">
-                              <div class="profile-image scale-in-center"><img src="/images/webimgs/sureshnew.png" alt="" /></div>
-                              <div class="figcaption">
-                                <h4>Suresh Kapa </h4>
-                                <h5>Ceo & Founder</h5>
-                                {/* <div class="icons">
-                                    <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-                                    <a href="https://twitter.com/"> <i class="fa fa-twitter"></i></a>
-                                    <a href="https://www.instagram.com/"> <i class="fa fa-instagram"></i></a>
-                                    <a href="https://rss.com/"><i class="fa fa-rss"></i></a>
-                                    <a href="https://www.youtube.com/"> <i class="fa fa-youtube"></i></a>
-                                    <a href="https://in.linkedin.com/"> <i class="fa fa-linkedin"></i></a>  
-                                </div> */}
-                              </div>
-                              
-                        </div>
-                        </div>                            
-                        
-                        <div class="col-lg-4 col-md-6 m-b30">
-                            <div class="our-team-1 hover-animation-1">
-                              <div class="profile-image scale-in-center"><img src="/images/webimgs/mahesh-kapa.png" alt="" /></div>
-                              <div class="figcaption">
-                                <h4>Mahesh Kapa </h4>
-                                <h5>COO </h5>
-                                {/* <div class="icons">
-                                    <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-                                    <a href="https://twitter.com/"> <i class="fa fa-twitter"></i></a>
-                                    <a href="https://www.instagram.com/"> <i class="fa fa-instagram"></i></a>
-                                    <a href="https://rss.com/"><i class="fa fa-rss"></i></a>
-                                    <a href="https://www.youtube.com/"> <i class="fa fa-youtube"></i></a>
-                                    <a href="https://in.linkedin.com/"> <i class="fa fa-linkedin"></i></a>  
-                                </div> */}
-                              </div>
-                              
-                        </div>                            	
-                        </div>
-                        
-                        
-                                                    
-         
-                    </div>
-                </div>
-            </div>
-            
-         </div>                  
-{/*         <!-- OUR TEAM END --> */}
+
         
                   
         

@@ -122,7 +122,7 @@ function Header() {
                             <div className="logo-header" style={{ flex: '0 0 auto', zIndex: 1400 }}>
                                 <div className="logo-header-inner logo-header-one" style={{ padding: '10px 0' }}>
                                     <a href="/">
-                                        <img src="images/BLACK- LA-TIERRA INFRA.png" alt="" style={{ minWidth: '200px', height: '70px', objectFit: 'contain' }} />
+                                        <img src="images/logo-1.png" alt="" style={{ minWidth: '200px', height: '70px', objectFit: 'contain' }} />
                                     </a>
                                 </div>
                             </div>
